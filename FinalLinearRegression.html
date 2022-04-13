@@ -13971,7 +13971,10 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Bike-Sharing-System-Model-for-BoomBikes">Bike Sharing System Model for BoomBikes<a class="anchor-link" href="#Bike-Sharing-System-Model-for-BoomBikes">&#182;</a></h1><h4 id="Which-variables-are-significant-in-predicting-the-demand-for-shared-bikes.">Which variables are significant in predicting the demand for shared bikes.<a class="anchor-link" href="#Which-variables-are-significant-in-predicting-the-demand-for-shared-bikes.">&#182;</a></h4><h4 id="How-well-those-variables-describe-the-bike-demands">How well those variables describe the bike demands<a class="anchor-link" href="#How-well-those-variables-describe-the-bike-demands">&#182;</a></h4>
+<h1 id="Bike-Sharing-System-Model-for-BoomBikes">Bike Sharing System Model for BoomBikes<a class="anchor-link" href="#Bike-Sharing-System-Model-for-BoomBikes">&#182;</a></h1>
+<pre><code>- Linear Regression Method to find which variables are significant in predicting the demand for shared bikes.
+- Perform test prediction and find how well those variables describe the bike demands</code></pre>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -18820,7 +18823,7 @@ memory usage: 9.7 KB
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Final-Remarks-on-Variables">Final Remarks on Variables<a class="anchor-link" href="#Final-Remarks-on-Variables">&#182;</a></h1>
+<h1 id="Final-Model-Interpretation">Final Model Interpretation<a class="anchor-link" href="#Final-Model-Interpretation">&#182;</a></h1>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -18828,7 +18831,7 @@ memory usage: 9.7 KB
 <ul>
 <li><p><strong>Hypthosesis Testing</strong> [Null Hypothesis - Bx=0 || Alternate Kypothesis - Bx !=0 ]</p>
 <ul>
-<li>Coefficient values in final model 6th iteration is as follows :<ul>
+<li>Coefficient values in final model Final iteration is as follows :<ul>
 <li>const 0.0442</li>
 <li>yr    0.2332</li>
 <li>temp  0.5527</li>
@@ -18844,6 +18847,36 @@ memory usage: 9.7 KB
 <li>ALso , please note  F statistic is [ F-statistic:     296.5] , with a p -value of approximate 0 which means model is signifant . </li>
 </ul>
 </li>
+<li><p>Equation based on final model - Model 8</p>
+<ul>
+<li>cnt = 0.0442 + (yr × 0.2332)  + (temp × 0.5527) − (windspeed × 0.1552) + (season_summer × 0.0894) + (season_winter ×0.1281) + (mnth_Sept × 0.0978)  − (weathersit_Bad_weathr × 0.2019) − (weathersit_Good_weathr × 0.306992)</li>
+</ul>
+</li>
+<li><p><strong>Significance of Coefficient</strong> :</p>
+<ul>
+<li>temp: A coefficient value of ‘0.5527’ indicates that a unit increase in temp variable, increases the bike hire numbers by 0.5527 units.</li>
+<li>weathersit_Bad_weathr: A coefficient value of ‘-0.2019’ indicated that, w.r.t Weathersit1, a unit increase in Weathersit3 variable, decreases the bike hire numbers by 0.2019 units.</li>
+<li>yr: A coefficient value of ‘0.2332’ indicated that a unit increase in yr variable, increases the bike hire numbers by 0.2332 units.</li>
+<li>season_summer: A coefficient value of ‘0.0894’ indicated that w.r.t season_summer, a unit increase in season_summer increases the bike hire numbers by 0.0894 units.</li>
+<li>windspeed: A coefficient value of ‘-0.1552’ indicated that, a unit increase in windspeed variable decreases the bike hire numbers by 0.1552 units.</li>
+<li>season_winter: A coefficient value of ‘0.1281’ indicated that w.r.t season_1, a unit increase in season_winter variable decreases the bike hire numbers by 0.1281 units.</li>
+<li>mnth_Sept: A coefficient value of ‘0.0978’ indicated that w.r.t mnth_Sept, a unit increase in mnth_Sept variable increases the bike hire numbers by 0.0978 units.</li>
+<li>weathersit_Good_weathr: A coefficient value of ‘-0.306992’ indicated that, w.r.t weathersit_Good_weathr, a unit increase in Weathersit2 variable, decreases the bike hire numbers by 0.306992 units.</li>
+<li>const: The Constant value of ‘0.0442’ indicated that, in the absence of all other predictor variables,The bike rental can still increase by 0.0442 units.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Final-Remarks-on-Variables">Final Remarks on Variables<a class="anchor-link" href="#Final-Remarks-on-Variables">&#182;</a></h1>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
 <li><p><strong>Top Three Predictor variables are :</strong></p>
 <ul>
 <li>temp [0.5527] . An increase of temp will increase the bike request.</li>
